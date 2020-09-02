@@ -16,6 +16,9 @@ public class Romans {
         } else if (i > 9 && i < 14){
             result = "X";
             result += addRomanOnes(i, 10);
+        } else if (i == 14) {
+            result = "X";
+            result += "IV";
         }
 
         return result;
