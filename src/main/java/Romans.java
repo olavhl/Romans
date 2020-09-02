@@ -25,6 +25,12 @@ public class Romans {
         } else if (i < 39) {
              result = "XXX";
              result += addNumberTens(i);
+        } else if( i < 49){
+             result = "XL";
+             result += addNumberTens(i);
+        }else if( i < 59){
+             result = "L";
+             result += addNumberTens(i);
         }
 
         return result;
