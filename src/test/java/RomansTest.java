@@ -101,4 +101,9 @@ public class RomansTest {
     void shouldReturnXC(){
         assertEquals("XC", roman.toRomans(90));
     }
+
+    @Test
+    void shouldReturnC(){
+        assertEquals("C", roman.toRomans(100));
+    }
 }
