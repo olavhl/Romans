@@ -68,6 +68,11 @@ public class RomansTest {
     }
 
     @Test
+    void shouldReturnXIX() {
+        assertEquals("XIX", roman.toRomans(19));
+    }
+
+    @Test
     void shouldReturnXXXVI() {
         assertEquals("XXXVI", roman.toRomans(36));
     }
@@ -78,8 +83,18 @@ public class RomansTest {
     }
 
     @Test
-    void shouldReturnL(){
+    void shouldReturnL() {
         assertEquals("L", roman.toRomans(50));
+    }
+
+    @Test
+    void shouldReturnLXXII() {
+        assertEquals("LXXII", roman.toRomans(72));
+    }
+
+    @Test
+    void shouldReturnLXXXVII(){
+        assertEquals("LXXXVII", roman.toRomans(87));
     }
 
     @Test

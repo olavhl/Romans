@@ -3,18 +3,17 @@ public class Romans {
         String result = "";
 
         if ( i < 9 ){
-            result = addNumberTens(i);
-        }
-
-         else if (i == 9) {
-            result = "IX";
+            result += addNumberTens(i);
+        } else if (i == 9) {
+            result += addNumberTens(i) ;
         } else if (i == 10) {
             result = "X";
-         } else if ( i < 19) {
+        } else if ( i < 19) {
              result = "X";
              result += addNumberTens(i);
         } else if ( i == 19) {
-             result = "XIX";
+             result = "X";
+             result += addNumberTens(i);
         } else if (i == 20) {
              result = "XX";
         } else if ( i < 29) {
@@ -28,9 +27,20 @@ public class Romans {
         } else if( i < 49){
              result = "XL";
              result += addNumberTens(i);
-        }else if( i < 59){
+        } else if( i < 59) {
              result = "L";
              result += addNumberTens(i);
+        } else if (i < 69) {
+            result = "LX";
+            result += addNumberTens(i);
+        } else if (i < 79) {
+            result = "LXX";
+            result += addNumberTens(i);
+        } else if ( i < 89) {
+            result = "LXXX";
+            result += addNumberTens(i);
+        } else if (i == 90) {
+            result = "XC";
         }
 
         return result;
@@ -44,9 +54,11 @@ public class Romans {
             result = addRomanOnes(remainder, 0);
         } else if (remainder == 4) {
             result = "IV";
-        } else if (remainder > 4) {
+        } else if (remainder < 9) {
             result = "V";
             result += addRomanOnes(remainder, 5);
+        } else if ( remainder == 9) {
+            result = "IX";
         }
 
         return result;
