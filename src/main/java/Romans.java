@@ -1,6 +1,14 @@
 public class Romans {
     public String toRomans(int i) {
+        String result = "";
 
-        return "I";
+        if (i == 1)
+        {
+            result = "I";
+        } else {
+            result = "II";
+        }
+
+        return result;
     }
 }

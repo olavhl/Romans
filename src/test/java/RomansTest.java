@@ -15,4 +15,10 @@ public class RomansTest {
         Romans roman = new Romans();
         assertEquals("II", roman.toRomans(2));
     }
+
+    @Test
+    void shouldReturnIII(){
+        Romans roman = new Romans();
+        assertEquals("III", roman.toRomans(3));
+    }
 }
