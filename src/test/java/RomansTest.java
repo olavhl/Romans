@@ -43,4 +43,9 @@ public class RomansTest {
     }
 
 
-}
+    @Test
+    void shouldReturnIX() {
+        assertEquals("IX", roman.toRomans(9));
+    }
+
+    }
