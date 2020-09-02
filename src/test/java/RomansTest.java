@@ -9,4 +9,10 @@ public class RomansTest {
         Romans roman = new Romans();
         assertEquals("I", roman.toRomans(1));
     }
+
+    @Test
+    void shouldReturnII(){
+        Romans roman = new Romans();
+        assertEquals("II", roman.toRomans(2));
+    }
 }
