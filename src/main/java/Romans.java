@@ -19,6 +19,9 @@ public class Romans {
         } else if (i == 14) {
             result = "X";
             result += "IV";
+        } else if (i == 15){
+            result = "X";
+            result += "V";
         }
 
         return result;
