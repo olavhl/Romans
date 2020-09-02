@@ -18,12 +18,12 @@ public class RomansTest {
     }
 
     @Test
-    void shouldReturnII(){
+    void shouldReturnII() {
         assertEquals("II", roman.toRomans(2));
     }
 
     @Test
-    void shouldReturnIII(){
+    void shouldReturnIII() {
         assertEquals("III", roman.toRomans(3));
     }
 
@@ -33,12 +33,12 @@ public class RomansTest {
     }
 
     @Test
-    void shouldReturnV(){
+    void shouldReturnV() {
         assertEquals("V", roman.toRomans(5));
     }
 
     @Test
-    void shouldReturnVII(){
+    void shouldReturnVII() {
         assertEquals("VII", roman.toRomans(7));
     }
 
@@ -65,4 +65,10 @@ public class RomansTest {
     @Test
     void shouldReturnXVI() {
         assertEquals("XVI", roman.toRomans(16));
+    }
+
+    @Test
+    void shouldReturnXXXVI() {
+        assertEquals("XXXVI", roman.toRomans(36));
+    }
 }

@@ -2,26 +2,42 @@ public class Romans {
     public String toRomans(int i) {
         String result = "";
 
-        if(i < 4){
-            result = addRomanOnes(i, 0);
-        } else if (i == 4) {
-            result = "IV";
-        } else if (i == 5) {
-            result = "V";
-        } else if ( i < 9){
-            result = "V";
-            result += addRomanOnes(i, 5);
-        } else if (i == 9) {
+        if ( i < 9 ){
+            result = addNumberTens(i);
+        }
+
+         else if (i == 9) {
             result = "IX";
-        } else if (i > 9 && i < 14){
+        } else if (i == 10) {
             result = "X";
-            result += addRomanOnes(i, 10);
-        } else if (i == 14) {
-            result = "X";
-            result += "IV";
-        } else if (i == 15){
-            result = "X";
-            result += "V";
+         } else if ( i < 19) {
+             result = "X";
+             result += addNumberTens(i);
+        } else if ( i == 19) {
+             result = "XIX";
+        } else if (i == 20) {
+             result = "XX";
+        } else if ( i < 29) {
+             result = "XX";
+             result += addNumberTens(i);
+        } else if ( i == 29) {
+             result = "XXIX";
+        }
+
+        return result;
+    }
+
+    public String addNumberTens(int i) {
+        int remainder = i % 10;
+        String result = "";
+
+        if(remainder < 4){
+            result = addRomanOnes(remainder, 0);
+        } else if (remainder == 4) {
+            result = "IV";
+        } else if (remainder > 4) {
+            result = "V";
+            result += addRomanOnes(remainder, 5);
         }
 
         return result;
