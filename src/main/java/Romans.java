@@ -2,45 +2,35 @@ public class Romans {
     public String toRomans(int i) {
         String result = "";
 
-        if ( i < 9 ){
+        if (i < 10){
             result += addNumberTens(i);
-        } else if (i == 9) {
-            result += addNumberTens(i) ;
-        } else if (i == 10) {
-            result = "X";
-        } else if ( i < 19) {
+        } else if (i < 20) { // 10-19
              result = "X";
              result += addNumberTens(i);
-        } else if ( i == 19) {
-             result = "X";
-             result += addNumberTens(i);
-        } else if (i == 20) {
-             result = "XX";
-        } else if ( i < 29) {
+        } else if (i < 30) { // 20-29
              result = "XX";
              result += addNumberTens(i);
-        } else if ( i == 29) {
-             result = "XXIX";
-        } else if (i < 39) {
+        } else if (i < 40) {
              result = "XXX";
              result += addNumberTens(i);
-        } else if( i < 49){
+        } else if(i < 50){
              result = "XL";
              result += addNumberTens(i);
-        } else if( i < 59) {
+        } else if(i < 60) {
              result = "L";
              result += addNumberTens(i);
-        } else if (i < 69) {
+        } else if (i < 70) {
             result = "LX";
             result += addNumberTens(i);
-        } else if (i < 79) {
+        } else if (i < 80) {
             result = "LXX";
             result += addNumberTens(i);
-        } else if ( i < 89) {
+        } else if (i < 90) {
             result = "LXXX";
             result += addNumberTens(i);
-        } else if (i == 90) {
+        } else if (i < 100) { // 90-99
             result = "XC";
+            result += addNumberTens(i);
         }
 
         return result;
@@ -57,7 +47,7 @@ public class Romans {
         } else if (remainder < 9) {
             result = "V";
             result += addRomanOnes(remainder, 5);
-        } else if ( remainder == 9) {
+        } else {
             result = "IX";
         }
 

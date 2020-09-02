@@ -88,6 +88,11 @@ public class RomansTest {
     }
 
     @Test
+    void shouldReturnLIX() {
+        assertEquals("LIX", roman.toRomans(59));
+    }
+
+    @Test
     void shouldReturnLXXII() {
         assertEquals("LXXII", roman.toRomans(72));
     }
