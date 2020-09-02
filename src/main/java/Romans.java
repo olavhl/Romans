@@ -5,8 +5,10 @@ public class Romans {
         if (i == 1)
         {
             result = "I";
-        } else {
+        } else if(i == 2) {
             result = "II";
+        } else {
+            result = "III";
         }
 
         return result;
