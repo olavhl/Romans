@@ -42,10 +42,14 @@ public class RomansTest {
         assertEquals("VII", roman.toRomans(7));
     }
 
-
     @Test
     void shouldReturnIX() {
         assertEquals("IX", roman.toRomans(9));
     }
 
+    @Test
+    void shouldReturnX() {
+        assertEquals("X", roman.toRomans(10));
     }
+
+}
