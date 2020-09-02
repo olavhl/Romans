@@ -37,5 +37,10 @@ public class RomansTest {
         assertEquals("V", roman.toRomans(5));
     }
 
+    @Test
+    void shouldReturnVII(){
+        assertEquals("VII", roman.toRomans(7));
+    }
+
 
 }
