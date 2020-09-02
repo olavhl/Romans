@@ -22,6 +22,9 @@ public class Romans {
              result += addNumberTens(i);
         } else if ( i == 29) {
              result = "XXIX";
+        } else if (i < 39) {
+             result = "XXX";
+             result += addNumberTens(i);
         }
 
         return result;
