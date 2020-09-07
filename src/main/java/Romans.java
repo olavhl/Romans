@@ -4,16 +4,7 @@ public class Romans {
 
         if ( i < 10 ){
             result = addNumberTens(i);
-        } /*else if ( i < 20) {
-             result = "X";
-             result += addNumberTens(i);
-        }  else if ( i < 30) {
-             result = "XX";
-             result += addNumberTens(i);
-        } else if (i < 40) {
-             result = "XXX";
-             result += addNumberTens(i);*/
-        else if (i < 40){
+        } else if (i < 40){
             result = addRomansThirty(i, 0);
         } else if (i < 50) {
              result = "XL";
@@ -23,6 +14,9 @@ public class Romans {
         } else if (i < 90){
             result = "L";
             result += addRomansThirty(i, 5);
+        } else if (i < 100) {
+            result = "XC";
+            result += addNumberTens(i);
         }
 
         return result;
@@ -45,7 +39,7 @@ public class Romans {
 
     public String addNumberTens(int i) {
         int remainder = i % 10;
-        String result = "";
+        String result;
 
         if(remainder < 4){
             result = addRomanOnes(remainder, 0);
