@@ -1,5 +1,37 @@
 public class Romans {
     public String toRomans(int i) {
+        String result;
+
+        if (i < 1000) {
+            result = addRomanThousand(i);
+        } else if ( i < 4000) {
+            result = addThousands(i);
+        } else {
+            result = "Your number is just too high dude..";
+        }
+
+        return result;
+    }
+
+    //Method to go from 1000 to 3999
+    public String addThousands(int i){
+        String result = "";
+
+        int thousands = i / 1000;
+
+        for (int j = 0; j < thousands; j++) {
+            result += "M";
+        }
+
+        thousands *= 1000;
+
+        result += addRomanThousand(i - thousands);
+
+        return result;
+    }
+
+    // Method to return thousands
+    public String addRomanThousand(int i) {
         String result = "";
 
         if (i < 400) {
@@ -16,8 +48,10 @@ public class Romans {
         }
 
 
+
         return result;
     }
+
 
     // Method to return from 100 -> 399 and 600 -> 899
     public String addRomanHundreds(int i, int divider){

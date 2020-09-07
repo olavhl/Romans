@@ -116,4 +116,19 @@ public class RomansTest {
         assertEquals("CMXCVIII", roman.toRomans(998));
     }
 
+    @Test
+    void shouldReturnMCMXCVIII() {
+        assertEquals("MCMXCVIII", roman.toRomans(1998));
+    }
+
+    @Test
+    void shouldReturnMMDCXLII() {
+        assertEquals("MMDCXLII", roman.toRomans(2642));
+    }
+
+    @Test
+    void shouldReturnMCMXCIX() {
+        assertEquals("MCMXCIX", roman.toRomans(1999));
+    }
+
 }
