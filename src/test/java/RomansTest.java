@@ -77,5 +77,14 @@ public class RomansTest {
         assertEquals("XL", roman.toRomans(40));
     }
 
+    @Test
+    void shouldReturnLII() {
+        assertEquals("LII", roman.toRomans(52));
+    }
+
+    @Test
+    void shouldReturnLXXII() {
+        assertEquals("LXXII", roman.toRomans(72));
+    }
 
 }

@@ -4,7 +4,7 @@ public class Romans {
 
         if ( i < 10 ){
             result = addNumberTens(i);
-        } else if ( i < 20) {
+        } /*else if ( i < 20) {
              result = "X";
              result += addNumberTens(i);
         }  else if ( i < 30) {
@@ -12,13 +12,33 @@ public class Romans {
              result += addNumberTens(i);
         } else if (i < 40) {
              result = "XXX";
-             result += addNumberTens(i);
+             result += addNumberTens(i);*/
+        else if (i < 40){
+            result = addRomansThirty(i, 0);
         } else if (i < 50) {
              result = "XL";
              result += addNumberTens(i);
         } else if (i == 50) {
              result = "L";
+        } else if (i < 90){
+            result = "L";
+            result += addRomansThirty(i, 5);
         }
+
+        return result;
+    }
+
+    // Adding method to return from 20 -> 39 and 70 -> 89
+    public String addRomansThirty(int i, int divider) {
+        String result = "";
+        int tens = i / 10;
+
+        for (int j = 0; j < tens - divider; j++) {
+            result += "X";
+        }
+
+        result += addNumberTens(i);
+
 
         return result;
     }
