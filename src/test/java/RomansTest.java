@@ -1,6 +1,5 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class RomansTest {
@@ -90,6 +89,31 @@ public class RomansTest {
     @Test
     void shouldReturnXCIX() {
         assertEquals("XCIX", roman.toRomans(99));
+    }
+
+    @Test
+    void shouldReturnCCCXCIX() {
+        assertEquals("CCCXCIX", roman.toRomans(399));
+    }
+
+    @Test
+    void shouldReturnCDXCV() {
+        assertEquals("CDXCV", roman.toRomans(495));
+    }
+
+    @Test
+    void shouldReturnDXXI() {
+        assertEquals("DXXI", roman.toRomans(521));
+    }
+
+    @Test
+    void shouldReturnDCCIX() {
+        assertEquals("DCCIX", roman.toRomans(709));
+    }
+
+    @Test
+    void shouldReturnCMXCVIII() {
+        assertEquals("CMXCVIII", roman.toRomans(998));
     }
 
 }

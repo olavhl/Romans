@@ -2,15 +2,55 @@ public class Romans {
     public String toRomans(int i) {
         String result = "";
 
+        if (i < 400) {
+            result = addRomanHundreds(i, 0);
+        } else if (i < 500) {
+            result = "CD";
+            result += fromOneToHundred(i - 400);
+        } else if (i < 900) {
+            result = "D";
+            result += addRomanHundreds(i, 5);
+        } else if (i < 1000) {
+            result = "CM";
+            result += fromOneToHundred(i - 900);
+        }
+
+
+        return result;
+    }
+
+    // Method to return from 100 -> 399 and 600 -> 899
+    public String addRomanHundreds(int i, int divider){
+        String result = "";
+
+        int hundreds = (i / 100) % 10;
+
+        for (int j = 0; j < hundreds - divider; j++){
+            result += "C";
+        }
+
+        // Uncool way to get the hundreds
+        int underHundred = (i / 100);
+        underHundred *= 100;
+
+
+        result += fromOneToHundred(i - underHundred);
+
+
+        return result;
+    }
+
+    // Method to read from 1 -> 100
+    public String fromOneToHundred(int i){
+        String result = "";
+
         if ( i < 10 ){
             result = addNumberTens(i);
         } else if (i < 40){
             result = addRomansThirty(i, 0);
         } else if (i < 50) {
-             result = "XL";
-             result += addNumberTens(i);
-        } else if (i == 50) {
-             result = "L";
+            result = "XL";
+            result += addNumberTens(i);
         } else if (i < 90){
             result = "L";
             result += addRomansThirty(i, 5);
